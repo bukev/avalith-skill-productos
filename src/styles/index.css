@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F2F0F5;
+  font-family: 'Poppins';
+  color: #0B0B23;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  margin: 12px 0;
+  background-color: #918EA2;
+  opacity: .5;
+}
+
+#root {}
+
+p {
+  margin: 0;
+}
+
+.product {
+  background: #FFFF;
+  border-radius: 16px;
+  padding: 18px 20px;
+  margin: 16px 0;
+  box-shadow: 0px 0px 17px -6px rgba(225, 223, 242, 0.88);
+  cursor: pointer;
+  transition: all .22s ease;
+  animation: appear .3s ease
+}
+
+.out-of-stock {
+  opacity: .5;
+  user-select: none;
+  cursor: unset;
+}
+
+.out-of-stock::after {
+  content: 'Producto fuera de stock';
+  color: rgb(255, 60, 25);
+}
+
+.product-hover:hover {
+  box-shadow: 0px 0px 17px -6px rgb(217, 198, 238);
+}
+
+.product-hover:hover .product-title {
+  color: #7665F1;
+}
+
+.product-banner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-title {
+  color: #545965;
+  font-size: 22px;
+  font-weight: 600;
+  transition: all .2s ease;
+}
+
+.price {
+  color: #7665F1;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.description {
+  margin-top: 6px;
+  color: #918EA2;
+  font-size: 14px;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(.9)
+  }
+
+  100% {
+    opacity: .5;
+    transform: scale(1)
+  }
+}
